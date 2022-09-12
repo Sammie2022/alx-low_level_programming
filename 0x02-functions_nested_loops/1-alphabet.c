@@ -1,0 +1,16 @@
+#include "main.h"
+/**
+ * main - main block
+ *
+ * A function that prints alphabets, in lower case.
+ *
+ * **/
+void print_alphabet(void);
+{
+	char c;
+
+	for (c = 'a', c <= 'z', c++)
+		putchar(c)
+	putchar('\n');
+}
+
