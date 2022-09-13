@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * main - main block
- * Description: a program that prints _putchar
- * Return: Always 0 (Success)
+ * main - Entry point
+ *
+ * Return: nothing, return void
  */
+
 int main(void)
 {
 	_putchar('_');
