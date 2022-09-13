@@ -5,7 +5,7 @@
  * Return: 0
  */
 int print_last_digit(int c)
-i{
+{
 	if (c > 0 || c == 0)
 	{
 		_putchar (c % 10 + '0');
