@@ -1,20 +1,30 @@
 #include "main.h"
 /**
- * print_last_digit - function that computes the absolute value of the integer
- * @c: is the init that will use for the argument of the function
- * Return: 0
+ * print_diagonal - prints diagonal line
+ * @n: print int
+ * Return: Always 0.
  */
-int print_last_digit(int c)
+void print_diagonal(int n)
 {
-	if (c > 0 || c == 0)
+	int i;
+	int b;
+
+	if (n > 0)
 	{
-		_putchar (c % 10 + '0');
-		return (c % 10);
+		for (i = 0; i < n; i++)
+		{
+			for (b = 0; b < i; b++)
+			{
+				_putchar (' ');
+			}
+			_putchar (92);
+			_putchar ('\n');
+
+		}
+
 	}
 	else
 	{
-		c = c * -1;
-		_putchar (c % 10 + '0');
-		return (c % 10);
+		_putchar ('\n');
 	}
 }
