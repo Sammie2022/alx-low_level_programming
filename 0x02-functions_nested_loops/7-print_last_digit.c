@@ -1,30 +1,29 @@
 #include "main.h"
+
 /**
- * print_diagonal - prints diagonal line
- * @n: print int
+ * print_last_digit - last digit
+ *
+ *@n: The int to print
  * Return: Always 0.
  */
-void print_diagonal(int n)
+
+int print_last_digit(int n)
+
 {
-	int i;
-	int b;
+	int last_digit;
 
-	if (n > 0)
+	if (n < 0)
 	{
-		for (i = 0; i < n; i++)
-		{
-			for (b = 0; b < i; b++)
-			{
-				_putchar (' ');
-			}
-			_putchar (92);
-			_putchar ('\n');
-
-		}
-
+		last_digit = (-1 * (n % 10));
+		_putchar (last_digit + '0');
+		return (last_digit);
 	}
+
 	else
 	{
-		_putchar ('\n');
+		last_digit = (n % 10);
+		_putchar (last_digit + '0');
+		return (last_digit);
 	}
+
 }
