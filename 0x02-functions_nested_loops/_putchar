@@ -3,7 +3,7 @@
 /**
 * _putchar - writes the character c to standout
 * @c: The character to print
-* 
+* @n: print int
 * Return: on success 1
 * On error, -1 is returned,the error is set appropriately
 */
