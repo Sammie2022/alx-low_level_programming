@@ -1,47 +1,48 @@
-#include <stdio.h>
+#include "main.h"
 /**
- *  * main - entry point
- *   *
- *    * Return: void
- *     */
-
-int main(void)
+ * times_table -prints tables
+ *
+ * Return: Always 0.
+ */
+void times_table(void)
 {
+	int a;
+	int b;
+	int c;
 
-	int p = 100;
-	int i;
-
-	i = 1;
-	while (i <= p)
+	for (a = 0; a <= 9; a++)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+		for (b = 0; b <= 9; b++)
 		{
-			printf("FizzBuzz ");
-		}
-
-		else if (i % 3 == 0)
-		{
-			printf("Fizz ");
-		}
-
-		else if (i % 5 == 0)
-		{
-			if (i < p)
-				printf("Buzz ");
-
+			c = a * b;
+			if ((c / 10) == 0)
+			{
+				if (b == 0)
+				{
+					_putchar ('0');
+				}
+				if (b != 0)
+				{
+					_putchar (' ');
+					_putchar ((c % 10) + '0');
+				}
+				if (b < 9)
+				{
+					_putchar(',');
+					_putchar (' ');
+				}
+			}
 			else
-				printf("Buzz");
+			{
+				_putchar ((c / 10) + '0');
+				_putchar ((c % 10) + '0');
+				if (b < 9)
+				{
+					_putchar(',');
+					_putchar (' ');
+				}
+			}
 		}
-
-		else
-		{
-			printf("%i ", i);
-		}
-
-		i++;
-
-
+		_putchar ('\n');
 	}
-	printf("\n");
-	return (0);
 }
