@@ -1,24 +1,48 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - Entry point.
+ * print_times_table - Prints the n times_table.
  *
- * Return: Always 0.
+ * @n: Argument to be passed.
+ *
  */
-
-int main(void)
-
+void print_times_table(int n)
 {
-	long n, i;
+	int i, j, r = 0;
 
-	n = 612852475143;
-	for (i = 2; i < n; i++)
+	if (n >= 0 && n <= 15)
 	{
-		while (n % i == 0)
-			n = n / i;
+		for (i = 0; i <= n; i++)
+		{
+			for (j = 0; j <= n; j++)
+			{
+				r = i * j;
+				if (j > 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+					if (r < 10)
+					{
+						_putchar(' ');
+						_putchar(' ');
+						_putchar('0' + r);
+					}
+					else if (r >= 10 && r < 100)
+					{
+						_putchar(' ');
+						_putchar('0' + (r / 10));
+						_putchar('0' + (r % 10));
+					}
+					else if (r >= 100)
+					{
+						_putchar('0' + (r / 100));
+						_putchar('0' + ((r / 10) % 10));
+						_putchar('0' + (r % 10));
+					}
+				}
+				else
+					_putchar('0' + r);
+			}
+			_putchar('\n');
+		}
 	}
-
-	printf("%lu\n", n);
-
-	return (0);
 }
