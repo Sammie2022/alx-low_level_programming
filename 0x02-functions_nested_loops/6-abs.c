@@ -1,28 +1,28 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- * print_line - draws a straight line in the terminal.
- * @n: print int
- *  Return: Always 0.
- */
-void print_line(int n)
+ *  * _abs - value absolute
+ *   *
+ *    *@n: The int to print
+ *     * Return: Always 0.
+ *      */
+
+int _abs(int n)
 {
-
-
-	int i;
-
-	if (n > 0)
+	if (n < 0)
 	{
-		for (i = 0; i < n; i++)
-		{
-			_putchar (95);
-		}
+		return (n * (-1));
+	}
 
-		_putchar ('\n');
+	else if (n == 0)
+	{
+		return (0);
 	}
 
 	else
 	{
-		_putchar ('\n');
+		return (n);
 	}
 
 }
