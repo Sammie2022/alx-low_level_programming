@@ -11,7 +11,6 @@
  */
 
 int check_num(char *str)
-
 {
 /*Declaring variables*/
 unsigned int count;
@@ -39,7 +38,6 @@ return (1);
  */
 
 int main(int argc, char *argv[])
-
 {
 
 /*Declaring variables*/
